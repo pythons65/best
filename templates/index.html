@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Contact-Form-Clean.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <div class="contact-clean">
+        <form method="post">{% csrf_token %}
+            <h2 class="text-center">Contact us</h2>
+            <div class="form-group"><input class="form-control name" type="text" name="name" placeholder="Name" required></div>
+            <div class="form-group"><input class="form-control email" type="email" name="email" placeholder="Email" required></div>
+            <div class="form-group"><textarea class="form-control" rows="14" name="message" placeholder="Message" required></textarea></div>
+            <div class="form-group"><button class="btn btn-primary" type="button">send </button></div>
+        </form>
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
